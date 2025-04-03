@@ -50,7 +50,7 @@ nav a {
 }
 
 main {
-    margin: 0 40px;
+    margin: 0 40px 100px 40px;
     display: grid;
     grid-template: 1fr;
     gap: 50px;
@@ -151,6 +151,89 @@ main a {
     gap: 20px;
 }
 
+footer > *{
+    padding: 40px;
+    font-family: var(--osvald);
+    color: white;
+}
+
+#footer-datas{
+    background-color: #000000;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    grid-template: repeat(4, 1fr);
+}
+
+#name-footer{
+    font-size: 1.7em;
+    font-weight: normal;
+}
+
+
+#subtitle-footer{
+    color: var(--red);
+}
+
+#aboutus-footer p:not(#name-footer){
+    font-weight: lighter;
+}
+
+
+#social-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.titles-footer{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+footer .inside-columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer .date-author{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+footer hr{
+    margin: 10px 0;
+}
+
+#galery-footer-container{
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 10px;
+}
+
+#footer-credits{
+    padding: 40px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#footer-credits a{
+    color: white;
+}
+
+#anchors-credits{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1023px){
+    html{
+        font-size: 26px;
+    }
+}
+
 @media screen and (min-width: 1024px) and (orientation: landscape) {
 
     nav{
@@ -215,5 +298,27 @@ main a {
     
     .mix-articles-container{
         gap: 10px;
-    } 
+    }
+
+    #footer-datas{
+        display: grid;
+        grid-template: 1fr / repeat(4, 1fr);
+    }
+
+    #footer-datas > *:not(#galery-footer){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #footer-credits{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #anchors-credits{
+        justify-content: flex-start;
+        gap: 50px;
+    }
 }
