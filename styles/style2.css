@@ -1,0 +1,54 @@
+
+nav{
+    gap: 30px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 15px;
+}
+
+
+nav a::after{
+    content: "▾"
+}
+
+main{
+    margin: 0 40px 200px 40px;
+    grid-template: 1fr / 50% 1fr 1.5fr;
+    gap: 30px;
+}
+
+.columns{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#manchete{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#manchete img{
+    height: 100%;
+}
+
+#manchete-text{
+    padding: 30px;
+}
+
+#highlights, #highlights-articles-container{
+    height: 100%;
+}
+
+#highlights-articles-container{
+    gap: 0;
+    justify-content: space-between;
+}
+
+.inside-columns{
+    grid-template: 1fr / 1fr 1fr;
+}
+
+.mix-articles-container{
+    gap: 10px;
+} 

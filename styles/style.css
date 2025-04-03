@@ -2,87 +2,218 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-:root{
+:root {
     --black: #000000;
     --red: #FF0000;
     --osvald: 'Oswald', Helvetica, sans-serif;
     --roboto: 'Roboto', sans-serif;
 }
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-div section{background-color: #00747C;}
-article{background-color: #00BBC9}
-
-img{
+img {
     width: 100%;
 }
 
-header{
+header {
     font-family: var(--osvald);
     margin: 40px;
+    overflow: hidden;
 }
 
-header h1{font-size: 3em;}
+header h1 {
+    font-size: 3em;
+}
 
-header h2{
+header h2 {
     font: normal normal 1em var(--osvald);
     color: var(--red);
 }
 
-nav{
+nav {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
-    padding: 15px;
+    padding: 15px 0;
     margin: 30px 0;
 }
 
-nav a{
+nav a {
     font-size: 1.2em;
     color: black;
     text-decoration: none;
 }
 
-nav a::after{
-    content: "▾"
-}
-
-main{
+main {
     margin: 0 40px;
     display: grid;
-    grid-template: 1fr / 50% 1fr 1fr;
-    gap: 30px;
-    font-family: var(--roboto);
+    grid-template: 1fr;
+    gap: 50px;
+    font-family: var(--osvald);
+    font-weight: lighter;
 }
 
-#manchete{
+#manchete {
     position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
 }
 
-#manchete img{
-    width: 100%;
-}
-
-#manchete-text{
+#manchete-text {
     background-color: rgba(0, 0, 0, 0.416);
+    max-height: 100%;
     color: white;
-
     position: absolute;
     bottom: 0;
-    padding: 30px;
+    padding: 5px;
 }
 
-#manchete .new-titles{
+#manchete .new-titles {
     font: normal bold 1.5em var(--roboto);
 }
 
-#principal-container{
+#world-container article:not(#principal-world) {
+    padding: 20px 0;
+}
+
+.category-title {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 5px 5px 0 5px;
+    font: normal normal 1.1em var(--osvald);
+}
+
+.category-line {
+    background-color: black;
+    height: 8px;
+    border: 0;
+    margin-bottom: 10px;
+}
+
+.inside-columns {
+    display: grid;
+    grid-template: 1fr;
+    gap: 20px;
+}
+
+#highlights, #highlights-articles-container {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+}
+
+#highlights-articles-container {
+    gap: 20px;
+}
+
+
+.new-titles {
+    font-weight: normal;
+}
+
+.date-author {
+    display: flex;
+    gap: 20px;
+    font-size: 0.7em;
+    font-weight: normal;
+    padding: 5px 0;
+}
+
+.date-author span {
+    color: grey;
+}
+
+main a {
+    color: black;
+    text-decoration: none;
+    font: normal normal 1em var(--osvald);
+}
+
+#world-container a {
+    display: block;
+    text-align: right;
+}
+
+#mix-sections-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mix-articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+
+    nav{
+        justify-content: flex-start;
+        gap: 30px;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+    }
+    
+    
+    nav a::after{
+        content: "▾"
+    }
+    
+    main{
+        margin: 0 40px 200px 40px;
+        grid-template: 1fr / 50% 1fr 1.5fr;
+        gap: 30px;
+    }
+    
+    .columns{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    #manchete{
+        position: relative;
+        margin-bottom: 30px;
+    }
+    
+    #manchete img{
+        height: 100%;
+    }
+    
+    #manchete-text{
+        padding: 30px;
+    }
+
+    #world-container article:not(#principal-world) {
+        padding: 0px;
+    }
+    
+    #highlights, #highlights-articles-container{
+        height: 100%;
+    }
+    
+    #highlights-articles-container{
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    #principal-world{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .inside-columns{
+        grid-template: 1fr / 1fr 1fr;
+    }
+    
+    .mix-articles-container{
+        gap: 10px;
+    } 
 }
