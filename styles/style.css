@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --black: #000000;
+    --red: #FF0000;
+    --osvald: 'Oswald', Helvetica, sans-serif;
+    --roboto: 'Roboto', sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+div section{background-color: #00747C;}
+article{background-color: #00BBC9}
+
+img{
+    width: 100%;
+}
+
+header{
+    font-family: var(--osvald);
+    margin: 40px;
+}
+
+header h1{font-size: 3em;}
+
+header h2{
+    font: normal normal 1em var(--osvald);
+    color: var(--red);
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 15px;
+    margin: 30px 0;
+}
+
+nav a{
+    font-size: 1.2em;
+    color: black;
+    text-decoration: none;
+}
+
+nav a::after{
+    content: "▾"
+}
+
+main{
+    margin: 0 40px;
+    display: grid;
+    grid-template: 1fr / 50% 1fr 1fr;
+    gap: 30px;
+    font-family: var(--roboto);
+}
+
+#manchete{
+    position: relative;
+}
+
+#manchete img{
+    width: 100%;
+}
+
+#manchete-text{
+    background-color: rgba(0, 0, 0, 0.416);
+    color: white;
+
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+}
+
+#manchete .new-titles{
+    font: normal bold 1.5em var(--roboto);
+}
+
+#principal-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
