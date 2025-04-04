@@ -20,7 +20,7 @@ img {
 
 header {
     font-family: var(--osvald);
-    margin: 40px;
+    margin: 40px 10px;
     overflow: hidden;
 }
 
@@ -50,7 +50,7 @@ nav a {
 }
 
 main {
-    margin: 0 40px 100px 40px;
+    margin: 0 20px 100px 20px;
     display: grid;
     grid-template: 1fr;
     gap: 50px;
@@ -152,7 +152,7 @@ main a {
 }
 
 footer > *{
-    padding: 40px;
+    padding: 40px 20px;
     font-family: var(--osvald);
     color: white;
 }
@@ -236,6 +236,10 @@ footer hr{
 
 @media screen and (min-width: 1024px) and (orientation: landscape) {
 
+    header{
+        margin: 40px 40px;
+    }
+
     nav{
         justify-content: flex-start;
         gap: 30px;
@@ -249,7 +253,7 @@ footer hr{
     }
     
     main{
-        margin: 0 40px 200px 40px;
+        margin: 0 40px 100px 40px;
         grid-template: 1fr / 50% 1fr 1.5fr;
         gap: 30px;
     }
@@ -298,6 +302,10 @@ footer hr{
     
     .mix-articles-container{
         gap: 10px;
+    }
+
+    footer > *{
+        padding: 40px;
     }
 
     #footer-datas{
